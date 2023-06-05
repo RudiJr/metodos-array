@@ -4,6 +4,6 @@ buttons.forEach(btn => btn.addEventListener('click', filtrarLivros));
 function filtrarLivros(){
     const btnCategoria = document.getElementById(this.id);
     const categoria = btnCategoria.value;
-    let livrosFiltrados = livros.filter(livro => livro.categoria == categoria);
+    let livrosFiltrados = categoria == 'disponivel' ? livros.filter(livro => livro.quantidade > 0) :livros.filter(livro => livro.categoria == categoria);
    exibirLivros(livrosFiltrados);
 };
