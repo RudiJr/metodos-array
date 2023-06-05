@@ -1,5 +1,5 @@
-const btn = document.querySelectorAll('.btn');
-btn.forEach(btn => btn.addEventListener('click', filtrarLivros));
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(btn => btn.addEventListener('click', filtrarLivros));
 
 function filtrarLivros(){
     const btnCategoria = document.getElementById(this.id);
