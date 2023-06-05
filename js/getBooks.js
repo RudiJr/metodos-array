@@ -1,6 +1,8 @@
 const insertLivros = document.getElementById('livros');
+const valorTotal = document.getElementById('valor_total_livros_disponiveis');
 
 function exibirLivros(listaLivros){
+    valorTotal.innerHTML = '';
     insertLivros.innerHTML = '';
     listaLivros.forEach(livro  => {
                                 // > = comparação // ? = if true  // : = if false
