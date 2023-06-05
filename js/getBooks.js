@@ -3,8 +3,10 @@ const insertLivros = document.getElementById('livros');
 function exibirLivros(listaLivros){
     insertLivros.innerHTML = '';
     listaLivros.forEach(livro  => {
+                                // > = comparação // ? = if true  // : = if false
+      let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel';
         insertLivros.innerHTML += `<div class="livro">
-        <img class="livro__imagens" src="${livro.imagem}" alt="${livro.alt}" />
+        <img class="${disponibilidade}" src="${livro.imagem}" alt="${livro.alt}" />
         <h2 class="livro__titulo">${livro.titulo}</h2>
         <p class="livro__descricao">${livro.autor}</p>
         <p class="livro__preco" id="preco">R$ ${livro.preco.toFixed(2)}</p>
